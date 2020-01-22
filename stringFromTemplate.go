@@ -5,6 +5,7 @@ import (
 	"text/template"
 )
 
+//ToString returns string generated from given object using provided text template.
 func ToString(templateString string, object interface{}) string {
 	var buffer strings.Builder
 
