@@ -1,4 +1,4 @@
-package stringFromTemplate
+package stringfromtemplate
 
 import (
 	"testing"
