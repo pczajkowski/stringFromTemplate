@@ -21,9 +21,7 @@ And something else here {{.Second}}`
 	result := ToString(templateString, test)
 
 	if expected != result {
-		t.Errorf("%v", result)
-	} else {
-		t.Log("String constructed properly.")
+		t.Errorf("Wrong result: %v", result)
 	}
 }
 
@@ -37,8 +35,6 @@ And something else here {{.Second}}`
 
 	if expected == result {
 		t.Error("It should fail on template parsing!")
-	} else {
-		t.Log(result)
 	}
 }
 
@@ -57,7 +53,5 @@ And something else here {{.Second}}`
 
 	if expected == result {
 		t.Error("It should fail!")
-	} else {
-		t.Log(result)
 	}
 }
