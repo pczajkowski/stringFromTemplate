@@ -1,4 +1,4 @@
-package stringfromtemplate
+package sft
 
 import (
 	"strings"
