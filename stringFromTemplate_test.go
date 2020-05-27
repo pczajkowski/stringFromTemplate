@@ -1,6 +1,7 @@
 package sft
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -12,7 +13,7 @@ type Something struct {
 const expected = `Something here 15
 And something else here and the string`
 
-func TestToString(t *testing.T) {
+func ExampleToString() {
 	const templateString = `Something here {{.First}}
 And something else here {{.Second}}`
 
@@ -20,9 +21,10 @@ And something else here {{.Second}}`
 
 	result := ToString(templateString, test)
 
-	if expected != result {
-		t.Errorf("Wrong result: %v", result)
-	}
+	fmt.Println(result)
+	// Output:
+	// Something here 15
+	// And something else here and the string
 }
 
 func TestToStringBadTemplate(t *testing.T) {
